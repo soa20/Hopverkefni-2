@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lora|Roboto+Mono");
 @import "config";
 
 * {
@@ -16,7 +17,7 @@ html { /* stylelint-disable-line */
   overflow-x: hidden;
   overflow-y: scroll; // alltaf hafa y skrollbar
 
-  font-family: $font-main;
+  font-family: $baseFont; 
   font-size: 16px;
 }
 

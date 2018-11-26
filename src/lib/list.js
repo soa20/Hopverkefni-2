@@ -1,4 +1,5 @@
-import { empty } from './helpers';
+// import * as Helper from './helpers';
+import { empty, getData } from './helpers'
 
 export default class List {
   constructor() {
@@ -7,5 +8,7 @@ export default class List {
 
   load() {
     empty(this.container);
+    let lectures = getData();
+    this.container.innerHTML = JSON.stringify(lectures);
   }
 }

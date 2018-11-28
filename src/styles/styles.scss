@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Lora|Roboto+Mono");
+@import url("https://fonts.googleapis.com/css?family=Lora%7CRoboto+Mono%22");
 @import "config";
+@import "mixins";
 
 * {
   padding: 0;
@@ -7,22 +8,57 @@
 }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
-html { /* stylelint-disable-line */
+/* stylelint-disable */
+html {
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: scroll; // alltaf hafa y skrollbar
-
-  font-family: $baseFont; 
+  overflow-y: scroll;
+  font-family: $baseFont;
   font-size: 16px;
 }
 
-img { /* stylelint-disable-line */
-  max-width: 100%;
+body {
+  margin: 0 auto;
 }
 
-// TODO import
+h1,
+h3,
+h4 {
+  font-family: $headlineFont;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* stylelint-enable */
+main {
+  max-width: $max-width;
+  margin: 0 auto;
+  cursor: default;
+  @media (max-width: $max-width + 60) {
+    padding-right: $gutter;
+    padding-left: $gutter;
+  }
+}
+
+img {   /* stylelint-disable-line */
+  width: 100%;
+}
+
+@import "lectures";

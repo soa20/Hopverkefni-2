@@ -5,37 +5,41 @@ Smíðuðum "mobile first", "responsive" prótótýpu af  fyrirlestravef.
 
 ## Til að keyra verkefni
 
-1. `npm install`
- * nauðsynlegt til að byrja verkefnið
-2. `npm run lint`
- * notað til að validate-a scss files
-3. `npm run dev`
- * til að keyra serverinn
+1.  `npm install`
+
+-   nauðsynlegt til að byrja verkefnið
+
+2.  `npm run lint`
+
+-   notað til að validate-a scss files
+
+3.  `npm run dev`
+
+-   til að keyra serverinn
 
 Verkefnið notar Browser-sync og Sass. Allt HTML og CSS er uppfært í browsernum þegar þú gerir breytingar á meðan serverinn er í gangi.
 
-Server runs on http://localhost:3000
+Server runs on <http://localhost:3000>
 
 ## Uppsetning á verkefni
 
-* img folder - allar myndir í verkefni
-* src folder - lib og styles folders og index.js
-* lib folder - js files
-* styles folder - scss files
-* index.html og fyrirlestur.html eru í rót verkefnis
+-   img folder - allar myndir í verkefni
+-   src folder - lib og styles folders og index.js
+-   lib folder - js files
+-   styles folder - scss files
+-   index.html og fyrirlestur.html eru í rót verkefnis
 
 Note: styles.css er "automatically generated file" og ætti aldrei að vera "checked in".
 
-
 ## Nemendur sem unnu að verkefni
 
-* Steinunn Ósk Axelsdóttir - [soa20](https://github.com/soa20)
+-   Steinunn Ósk Axelsdóttir - [soa20](https://github.com/soa20)
 
+* * *
 
-
----
 ### Upprunalegt verkefni
----
+
+* * *
 
 # Hópverkefni 2
 
@@ -58,7 +62,7 @@ Letur fyrir fyrirsagnir er Roboto Mono, Courier New eða monospace.
 
 Flest allt er sett upp í 12 dálka grind með `20px` gutter.
 
-Öll bil eru hálft, heilt, tvöfalt eða þrefalt margfeldi af gutter. Hægt er að nota reglustiku tól (t.d. http://www.arulerforwindows.com/ eða http://www.pascal.com/software/freeruler/) til að finna nákvæmar stærðir en mestu skiptir að lausn svipi til en sé ekki nákvæmlega eins og fyrirmynd.
+Öll bil eru hálft, heilt, tvöfalt eða þrefalt margfeldi af gutter. Hægt er að nota reglustiku tól (t.d. <http://www.arulerforwindows.com/> eða <http://www.pascal.com/software/freeruler/>) til að finna nákvæmar stærðir en mestu skiptir að lausn svipi til en sé ekki nákvæmlega eins og fyrirmynd.
 
 Allar hreyfingar gerast á `300ms` með `ease-in-out` hröðunarfalli. Hreyfingar eru þegar svimað er yfir fyrirlestri í lista og síunar tökkum.
 
@@ -88,27 +92,27 @@ Nota skal `slug` sem auðkenni yfir kláraða fyrirlestra.
 
 `lectures.json` inniheldur fylki af fyrirlestrum sem birta skal. Hver fyrirlestur getur haft:
 
-* `slug`, notað til að hlekkja á fyrirlestur
-* `title`, titill fyrirlesturs
-* `category`, flokkur fyrirlesturs
-* `image`, mynd í hausi fyrirlesturs, má sleppa, þá skal birta gráan lit í staðinn
-* `thumbnail`, mynd á yfirliti fyrirlestra, má sleppa, þá skal birta gráan lit í staðinn
-* `content`, fylki af efni fyrirlesturs
+-   `slug`, notað til að hlekkja á fyrirlestur
+-   `title`, titill fyrirlesturs
+-   `category`, flokkur fyrirlesturs
+-   `image`, mynd í hausi fyrirlesturs, má sleppa, þá skal birta gráan lit í staðinn
+-   `thumbnail`, mynd á yfirliti fyrirlestra, má sleppa, þá skal birta gráan lit í staðinn
+-   `content`, fylki af efni fyrirlesturs
 
 Fyrir efni fyrirlesturs er efni alltaf með:
 
-* `type`, gerð efnis
-* `data`, gögn efnis
+-   `type`, gerð efnis
+-   `data`, gögn efnis
 
 þar sem `type` getur verið:
 
-* `youtube`, `data` inniheldur hlekk á youtube myndband
-* `text`, `data` inniheldur gögn þar sem `\n` merkir á milli málsgreina, þ.e.a.s. texta skal birta innan `<p>`, skipt á `\n`
-* `quote`, `data` inniheldur tilvitnun, aukalega getur verið `attribute` með þeim sem vitnað er í
-* `image`, `data` inniheldur slóð á mynd, aukalega getur verið `caption` með texta með mynd
-* `heading`, `data` inniheldur fyrirsögn
-* `list`, `data` inniheldur fylki af textum í lista
-* `code`, `data` inniheldur kóða þar sem bil og nýjar línur skipta máli
+-   `youtube`, `data` inniheldur hlekk á youtube myndband
+-   `text`, `data` inniheldur gögn þar sem `\n` merkir á milli málsgreina, þ.e.a.s. texta skal birta innan `<p>`, skipt á `\n`
+-   `quote`, `data` inniheldur tilvitnun, aukalega getur verið `attribute` með þeim sem vitnað er í
+-   `image`, `data` inniheldur slóð á mynd, aukalega getur verið `caption` með texta með mynd
+-   `heading`, `data` inniheldur fyrirsögn
+-   `list`, `data` inniheldur fylki af textum í lista
+-   `code`, `data` inniheldur kóða þar sem bil og nýjar línur skipta máli
 
 Athugið að meira efni mun bætast við það sem gefið er í byrjun. Virkni ætti að ráða við hvaða efni sem er í hvaða formi sem er, svo lengi sem það fylgir reglum að ofan.
 
@@ -122,50 +126,50 @@ Notast skal við Git og GitHub. Engar zip skrár með kóða ættu að ganga á 
 
 `README.md` skrá skal vera í rót verkefnis og innihalda:
 
-* Upplýsingar um hvernig keyra skuli verkefnið
-* Lýsingu á uppsetningu verkefnis, hvernig því er skipt í möppur, hvernig CSS og JavaScript er skipulagt og fleira sem á við
-* Upplýsingar um alla sem unnu verkefni
-* Leyfilegt er að halda eftir þessari verkefnalýsingu en hún skal þá koma _á eftir_ ykkar lýsingu
+-   Upplýsingar um hvernig keyra skuli verkefnið
+-   Lýsingu á uppsetningu verkefnis, hvernig því er skipt í möppur, hvernig CSS og JavaScript er skipulagt og fleira sem á við
+-   Upplýsingar um alla sem unnu verkefni
+-   Leyfilegt er að halda eftir þessari verkefnalýsingu en hún skal þá koma _á eftir_ ykkar lýsingu
 
 ## Tæki og tól
 
 Eftirfarandi er sett upp í verkefni:
 
-* `.stylelintrc` með upplýsingum um hvernig stylelint eigi að haga sér. Setja þarf upp `stylelint-config-primer` pakkann
-* `.eslintrc` skrá sem segir til um hvernig lint fyrir JavaScript skrár skuli háttað
-* `.gitignore` sem hunsar algengar skrár, [sjá nánar](https://help.github.com/ignore-files/)
-  - Allt undir `./dist` hunsað sem þýðir að það verður _ekki_ checkað inn. Það er gert vegna þess að þær skrár eru útbúnar af tólum þegar verkefni er keyrt.
-* `.gitattributes` sem kemur í veg fyrir ósamræmi sem geta komið upp þegar unnið er á milli stýrikerfa
-* `.editorconfig` sem samræmir notkun á tabs og spaces, bilum [og fleira](https://editorconfig.org/)
-* `grid.css` til að sjá grid sem fyrirmynd er unnin eftir
-* `src/` mappa með
-  - `styles/` undirmöppu með `styles.scss` grunni
-  - `lib/` undirmappa sem gæti innihaldið JavaScript kóða auk tillögu að grunni fyrir virkni á forsíðu
-  - `index.js` skrá sem vísar í `lib/`
-* `dist/` mappa sem ætti að innihalda _þýddar_ sass og JavaScript skrár
-* `img/` með öllum myndum sem þarf í verkefnið
-* `package.json` hefur uppsett script ásamt dependencies
-  - `eslint` til að keyra eslint
-  - `stylelint` til að keyra stylelint
-  - `test` til að keyra bæði `eslint` og `stylelint`
-  - `browser-sync` til að keyra verkefni, bæta þarf við skrám sem vaktaðar eru
-  - `sass` til að keyra fyrstu þýðingu
-  - `sass-watch` til að fylgjast með sass skrám og þýða
-  - `dev` til að keyra `sass` og `browser-sync`
+-   `.stylelintrc` með upplýsingum um hvernig stylelint eigi að haga sér. Setja þarf upp `stylelint-config-primer` pakkann
+-   `.eslintrc` skrá sem segir til um hvernig lint fyrir JavaScript skrár skuli háttað
+-   `.gitignore` sem hunsar algengar skrár, [sjá nánar](https://help.github.com/ignore-files/)
+    -   Allt undir `./dist` hunsað sem þýðir að það verður _ekki_ checkað inn. Það er gert vegna þess að þær skrár eru útbúnar af tólum þegar verkefni er keyrt.
+-   `.gitattributes` sem kemur í veg fyrir ósamræmi sem geta komið upp þegar unnið er á milli stýrikerfa
+-   `.editorconfig` sem samræmir notkun á tabs og spaces, bilum [og fleira](https://editorconfig.org/)
+-   `grid.css` til að sjá grid sem fyrirmynd er unnin eftir
+-   `src/` mappa með
+    -   `styles/` undirmöppu með `styles.scss` grunni
+    -   `lib/` undirmappa sem gæti innihaldið JavaScript kóða auk tillögu að grunni fyrir virkni á forsíðu
+    -   `index.js` skrá sem vísar í `lib/`
+-   `dist/` mappa sem ætti að innihalda _þýddar_ sass og JavaScript skrár
+-   `img/` með öllum myndum sem þarf í verkefnið
+-   `package.json` hefur uppsett script ásamt dependencies
+    -   `eslint` til að keyra eslint
+    -   `stylelint` til að keyra stylelint
+    -   `test` til að keyra bæði `eslint` og `stylelint`
+    -   `browser-sync` til að keyra verkefni, bæta þarf við skrám sem vaktaðar eru
+    -   `sass` til að keyra fyrstu þýðingu
+    -   `sass-watch` til að fylgjast með sass skrám og þýða
+    -   `dev` til að keyra `sass` og `browser-sync`
 
 Setja þarf upp
 
-* `rollup` til að pakka saman JavaScript kóða
-* `babel` til að _transpila_ kóða
+-   `rollup` til að pakka saman JavaScript kóða
+-   `babel` til að _transpila_ kóða
 
 og bæta við í tól að ofan.
 
 ## Mat
 
-* 30% - `README` eftir forskrift, tæki og tól uppsett. Snyrtilegt, gilt (skv. eslint) JavaScript. Snyrtilegt, gilt (skv. stylelint) CSS/Sass, gilt og aðgengilegt HTML. Git notað
-* 30% – Yfirlitssíða með síu
-* 30% – Fyrirlestrarsíða útfærð með efni
-* 10% – Hægt að skrá að fyrirlestur sér kláraður
+-   30% - `README` eftir forskrift, tæki og tól uppsett. Snyrtilegt, gilt (skv. eslint) JavaScript. Snyrtilegt, gilt (skv. stylelint) CSS/Sass, gilt og aðgengilegt HTML. Git notað
+-   30% – Yfirlitssíða með síu
+-   30% – Fyrirlestrarsíða útfærð með efni
+-   10% – Hægt að skrá að fyrirlestur sér kláraður
 
 ## Sett fyrir
 
@@ -177,9 +181,9 @@ Einn aðili úr hóp skal skila fyrir hönd allra og skila skal undir „Verkefn
 
 Skil skulu innihalda:
 
-* Nöfn allra í hóp ásamt notendanafni
-* Slóð á GitHub repo fyrir verkefni, og dæmatímakennurum skal hafa verið boðið í repo ([sjá leiðbeiningar](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)). Notendanöfn þeirra eru `arnar44`, `gorri4`, `mimiqkz`, `hinriksnaer`, `gunkol`, `freyrdanielsson` og `osk`
-* Slóð á verkefnið keyrandi á vefnum
+-   Nöfn allra í hóp ásamt notendanafni
+-   Slóð á GitHub repo fyrir verkefni, og dæmatímakennurum skal hafa verið boðið í repo ([sjá leiðbeiningar](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)). Notendanöfn þeirra eru `arnar44`, `gorri4`, `mimiqkz`, `hinriksnaer`, `gunkol`, `freyrdanielsson` og `osk`
+-   Slóð á verkefnið keyrandi á vefnum
 
 ## Einkunn
 
@@ -191,17 +195,17 @@ Sett verða fyrir tvö stærri verkefni þar sem hvort um sig gildir 11%, samtal
 
 Myndir frá:
 
-* https://unsplash.com/photos/xekxE_VR0Ec
-* https://unsplash.com/photos/C4G18Paw0d4
-* https://unsplash.com/photos/iar-afB0QQw
+-   <https://unsplash.com/photos/xekxE_VR0Ec>
+-   <https://unsplash.com/photos/C4G18Paw0d4>
+-   <https://unsplash.com/photos/iar-afB0QQw>
 
----
+* * *
 
 > Útgáfa 0.2
 
 ### Útgáfusaga
 
 | Útgáfa | Lýsing                                |
-|--------|---------------------------------------|
+| ------ | ------------------------------------- |
 | 0.1    | Fyrsta útgáfa                         |
 | 0.2    | Setja inn auka efni í `lectures.json` |

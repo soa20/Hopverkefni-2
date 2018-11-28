@@ -1,13 +1,11 @@
 {
-  "lectures": [
-    {
+  "lectures": [{
       "slug": "html-sagan",
       "title": "Sagan",
       "category": "html",
       "image": "img/code.jpg",
       "thumbnail": "img/thumb1.jpg",
-      "content": [
-        {
+      "content": [{
           "type": "youtube",
           "data": "https://www.youtube.com/embed/-dC37AYntUQ"
         },
@@ -73,8 +71,7 @@
       "title": "Element",
       "category": "html",
       "image": "img/code2.jpg",
-      "content": [
-        {
+      "content": [{
           "type": "text",
           "data": "HTML5 staðalinn skilgreinir element og skiptir þeim í hópa:"
         },
@@ -160,10 +157,9 @@
       "slug": "html-a11y",
       "title": "Aðgengi",
       "category": "html",
-      "image": "img/code3.jpg",
+      "image": "img/code2.jpg",
       "thumbnail": "img/thumb2.jpg",
-      "content": [
-        {
+      "content": [{
           "type": "youtube",
           "data": "https://www.youtube.com/embed/jyxKJiKHdc0"
         },
@@ -212,8 +208,7 @@
       "category": "css",
       "image": "img/code2.jpg",
       "thumbnail": "img/thumb3.jpg",
-      "content": [
-        {
+      "content": [{
           "type": "text",
           "data": "CSS stendur fyrir Cascading Style Sheets og er style sheet language sem lýsir framsetningu á skjali skrifuðu í markup máli, t.d. HTML, XHTML, XML og SVG. CSS kom fyrst fram á sjónarsviðið árið 1994 þegar Håkon Wium Lie lagði til Cascading HTML style sheets. Í tillögunni er farið yfir hvernig vafrinn stjórni að mestu allri birtingu og „the author of HTML documents has no influence over the presentation“, sem var vissulega rétt, fyrir tíma CSS var engin leið til að breyta litum á tenglum!"
         },
@@ -279,8 +274,7 @@
       "category": "css",
       "image": "img/code2.jpg",
       "thumbnail": "img/thumb4.jpg",
-      "content": [
-        {
+      "content": [{
           "type": "text",
           "data": "Box módelið lýsir því hvernig rétthyrnd box fyrir element eru mynduð."
         },
@@ -304,20 +298,17 @@
       "title": "Flexbox",
       "category": "css",
       "thumbnail": "img/thumb5.jpg",
-      "content": [
-        {
-          "type": "youtube",
-          "data": "https://www.youtube.com/embed/-tyW_8dwpq8"
-        }
-      ]
+      "content": [{
+        "type": "youtube",
+        "data": "https://www.youtube.com/embed/-tyW_8dwpq8"
+      }]
     },
     {
       "slug": "css-responsive",
       "title": "Skalanleg vefhönnun",
       "category": "css",
       "thumbnail": "img/thumb6.jpg",
-      "content": [
-        {
+      "content": [{
           "type": "quote",
           "data": "The web’s greatest strength, I believe, is often seen as a limitation, as a defect. It is the nature of the web to be flexible, and it should be our role as designers and developers to embrace this flexibility, and produce pages which, by being flexible, are accessible to all.",
           "attribute": "John Allsopp: A Dao of Web Design í A List Apart árið 2000"
@@ -389,8 +380,7 @@
       "title": "Gildi, týpur og virkjar",
       "image": "img/code2.jpg",
       "category": "javascript",
-      "content": [
-        {
+      "content": [{
           "type": "quote",
           "data": "JavaScript er túlkað skriftumál, byggt á prótótýpum með dýnamískar, veikar týpur, fyrsta flokks föll og stuðning við hlutbunda-, gildinga- og fallaforritun"
         },
@@ -437,12 +427,10 @@
       "title": "Forrit",
       "category": "javascript",
       "thumbnail": "img/thumb7.jpg",
-      "content": [
-        {
-          "type": "youtube",
-          "data": "https://www.youtube.com/embed/VSOQrRXyg28"
-        }
-      ]
+      "content": [{
+        "type": "youtube",
+        "data": "https://www.youtube.com/embed/VSOQrRXyg28"
+      }]
     },
     {
       "slug": "js-functions",
@@ -450,8 +438,7 @@
       "category": "javascript",
       "image": "img/code.jpg",
       "thumbnail": "img/thumb8.jpg",
-      "content": [
-        {
+      "content": [{
           "type": "youtube",
           "data": "https://www.youtube.com/embed/zqPVndkKuoE"
         },
@@ -467,8 +454,7 @@
       "category": "javascript",
       "image": "img/code.jpg",
       "thumbnail": "img/thumb9.jpg",
-      "content": [
-        {
+      "content": [{
           "type": "heading",
           "data": "Array"
         },
@@ -512,8 +498,7 @@
       "slug": "js-dom",
       "title": "DOM & vafrinn",
       "category": "javascript",
-      "content": [
-        {
+      "content": [{
           "type": "youtube",
           "data": "https://www.youtube.com/embed/wVCUH4vvVTc"
         },
@@ -541,12 +526,10 @@
       "category": "javascript",
       "image": "img/code2.jpg",
       "thumbnail": "img/thumb10.jpg",
-      "content": [
-        {
-          "type": "youtube",
-          "data": "https://www.youtube.com/embed/3FrbQcf1T3s"
-        }
-      ]
+      "content": [{
+        "type": "youtube",
+        "data": "https://www.youtube.com/embed/3FrbQcf1T3s"
+      }]
     }
   ]
 }

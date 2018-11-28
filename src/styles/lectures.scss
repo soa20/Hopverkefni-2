@@ -1,0 +1,202 @@
+@import "config";
+
+.header {
+  display: flex;
+  color: $black;
+  flex-direction: column;
+  justify-content: center;
+
+  .banner {
+    position: relative;
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    background-color: $darkGray;
+    background-image: url("/img/header.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+
+    h4,
+    h1 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .protection {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .filterBar {
+    padding: 10px;
+    margin: 0 auto;
+
+    button {
+      padding: 0.45em;
+      margin: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      background: $darkGray;
+      border: 0;
+      border-radius: 8px;
+
+      &:hover { /* stylelint-disable-line */
+        background-color: $green;
+      }
+
+      &:active { /* stylelint-disable-line */
+        border: 0;
+      }
+
+      &.on { /* stylelint-disable-line */
+        background: $green;
+      }
+    }
+  }
+}
+
+.lecture__page {
+  .header {
+    margin-bottom: $gutter;
+
+    .banner {
+      background-image: none;
+    }
+  }
+
+  a.list__return { /* stylelint-disable-line */
+    display: block;
+    margin: $gutter;
+    text-align: center;
+    text-decoration: none;
+
+    &.marked span { /* stylelint-disable-line */
+      color: $green;
+    }
+  }
+}
+
+.lectures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.lectures.filtered {
+  .lecture {
+    display: none;
+  }
+
+  &.html {
+    .lecture.html {
+      display: flex;
+    }
+  }
+
+  &.css {
+    .lecture.css {
+      display: flex;
+    }
+  }
+
+  &.javascript {
+    .lecture.javascript {
+      display: flex;
+    }
+  }
+}
+
+.lecture {
+  position: relative;
+  flex: 0 1 100%;
+  text-decoration: none;
+
+  &.card {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    flex-direction: column;
+    background: $mediumGray;
+
+    &:hover {
+      background-color: $lightGray;
+    }
+
+    div {
+      position: relative;
+      display: flex;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 0.5em;
+      color: $black;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      span.read { /* stylelint-disable-line */
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: block;
+        font-size: 2em;
+        color: $green;
+      }
+    }
+  }
+
+  &.full {
+    margin: 0 auto;
+
+    section {
+      @include row;
+
+      p {
+        @include row;
+      }
+
+      code { /* stylelint-disable-line */
+        p {
+          margin-bottom: 0;
+
+          &.fat {
+            margin-bottom: $gutter;
+          }
+        }
+      }
+
+      iframe { /* stylelint-disable-line */
+        width: 100%;
+      }
+
+      blockquote { /* stylelint-disable-line */
+        width: 100%;
+        padding: $gutter;
+        background-color: $mediumGray;
+      }
+    }
+  }
+}
+@media screen and (min-width: 501px) {
+  .lecture {
+    flex: 0 0 calc(33% - 10px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .lecture {
+    flex: 0 0 calc(33% - 10px);
+
+    &.full {
+      flex: 0 0 100%;
+      @include columns(8);
+    }
+  }
+}

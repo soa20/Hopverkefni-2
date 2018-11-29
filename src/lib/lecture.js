@@ -65,7 +65,6 @@ export default class List {
   }
 
   buildVideo(data) {
-
     const video = el('iframe');
     video.setAttribute('title', 'Youtube Video');
     video.setAttribute('class', 'youtube-player');
@@ -74,7 +73,6 @@ export default class List {
     video.setAttribute('src', data);
     video.setAttribute('frameborder', 0);
     video.setAttribute('allowFullScreen', true);
-
     return video;
   }
 
@@ -83,7 +81,6 @@ export default class List {
     const values = Object.values(data);
     const result = el('div');
     result.setAttribute('class', 'lecture full');
-
     for (let i = 0; i < keys.length; i += 1) {
       const section = el('section');
       const contentType = values[i].type || null;
@@ -130,9 +127,12 @@ export default class List {
     const result = this.container;
     const banner = document.querySelector('.banner');
     const link = el('a', document.createTextNode('Klára fyrirlestur'));
-    link.setAttribute('href', 'index.html');
+    const back = el('a', document.createTextNode('Til Baka'));
     link.setAttribute('class', 'list__return');
     link.setAttribute('data', slug);
+    back.setAttribute('href', 'index.html')
+    back.setAttribute('class', 'list__return');
+    back.setAttribute('data', slug);
     link.onclick = markRead;
 
     if (isLectureRead) {
@@ -148,6 +148,7 @@ export default class List {
 
     result.appendChild(this.getContent(content));
     result.appendChild(link);
+    result.appendChild(back);
   }
 
   getSlug(paramName) {

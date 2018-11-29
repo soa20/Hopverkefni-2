@@ -29,7 +29,7 @@ export default class List {
 
     if (marked) {
       marked.classList.add('read');
-      marked.innerHTML = '&#10004;';
+      marked.innerHTML = '&#10003;';
     }
 
     result.setAttribute('class', `lecture card ${category}`);

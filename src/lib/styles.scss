@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald:700");
+@import "config";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  /* stylelint-disable-line */
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: $baseFont;
+  font-size: 16px;
+}
+
+body {
+  margin: 0 auto;
+  color: $black;
+  background-color: $white;
+}
+
+main {
+  max-width: $max-width;
+  margin: 0 auto;
+  cursor: default;
+}
+@import "grid";
+@import "button";
+@import "header";
+@import "footer";
+@import "list";
+@import "images";
+@import "text";
+@import "listProducts";
+@import "staff";
+@import "cart";

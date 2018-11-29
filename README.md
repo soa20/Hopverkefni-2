@@ -1,7 +1,7 @@
 # Hópverkefni 1 - Fyrirlestrar
 
 Verkefni fyrir Vefforritun 1 (TOL107G).
-Smíðuðum "mobile first", "responsive" prótótýpu af  fyrirlestravef.
+Smíðaði "mobile first", "responsive" prótótýpu af  fyrirlestravef. Notar Local Storage til að vista fyrirlestra sem er búið að lesa. 
 
 ## Til að keyra verkefni
 
@@ -9,27 +9,28 @@ Smíðuðum "mobile first", "responsive" prótótýpu af  fyrirlestravef.
 
 -   nauðsynlegt til að byrja verkefnið
 
-2.  `npm run lint`
+2.  `npm run test`
 
--   notað til að validate-a scss files
+-   notað til að validate-a scss og javascript files
 
 3.  `npm run dev`
 
 -   til að keyra serverinn
 
-Verkefnið notar Browser-sync og Sass. Allt HTML og CSS er uppfært í browsernum þegar þú gerir breytingar á meðan serverinn er í gangi.
+Verkefnið notar Babel og Roll-up (til að búa til "browser-ready" Javascript), Browser-sync og Sass. Allt HTML og CSS er uppfært í browsernum þegar þú gerir breytingar á meðan serverinn er í gangi.
 
 Server runs on <http://localhost:3000>
 
 ## Uppsetning á verkefni
 
+-   dist folder - allar "rolled up" files
 -   img folder - allar myndir í verkefni
 -   src folder - lib og styles folders og index.js
--   lib folder - js files
--   styles folder - scss files
+-   src/lib folder -  allar aðrar js files
+-   src/styles folder - scss files
 -   index.html og fyrirlestur.html eru í rót verkefnis
 
-Note: styles.css er "automatically generated file" og ætti aldrei að vera "checked in".
+Note: dist directory er "automatically generated file" og ætti aldrei að vera "checked in".
 
 ## Nemendur sem unnu að verkefni
 

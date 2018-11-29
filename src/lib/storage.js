@@ -1,35 +1,34 @@
 const LOCALSTORAGE_KEY = 'lectures';
-const Store = window.localStorage;
 
 export function load() {
-  const data = Store.getItem(LOCALSTORAGE_KEY);
-  return JSON.parse(data);
+  return localStorage.getItem(LOCALSTORAGE_KEY) || false;
 }
 
-export function save(slug) {
-  const data = slug;
-
-  console.log('DATA==', data);
+export function save(data) {
   let slugs = load();
-  if (slugs && slugs.length > 0) {
-    slugs.push(data);
+  slugs = slugs ? slugs.split(',') : [];
+
+  if (slugs.length > 0) {
+    if (!slugs.includes(data)) {
+      slugs.push(data);
+      localStorage.setItem(LOCALSTORAGE_KEY, slugs.toString());
+    } else {
+      console.log('Slug Exists, do nothing');
+    }
   } else {
-    slugs = [data];
+    localStorage.setItem(LOCALSTORAGE_KEY, [data].toString());
   }
-  Store.setItem(LOCALSTORAGE_KEY, JSON.stringify(slugs));
 }
 
-export function unSave(slug) {
-  const data = slug;
-
-  console.log('DATA==', data);
+export function unSave(data) {
   let slugs = load();
-  if (slugs && slugs.length < 0) {
-    slugs.pop(data);
+  slugs = slugs ? slugs.split(',') : [];
+  if (slugs && slugs.indexOf(data) >= 0) {
+    slugs.splice(slugs.indexOf(data), 1);
   }
-  Store.removeItem(LOCALSTORAGE_KEY, JSON.stringify(slugs));
+  localStorage.setItem(LOCALSTORAGE_KEY, slugs.toString());
 }
 
 export function clear() {
-  Store.removeItem(LOCALSTORAGE_KEY);
+  localStorage.removeItem(LOCALSTORAGE_KEY);
 }

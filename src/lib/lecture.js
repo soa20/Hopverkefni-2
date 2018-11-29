@@ -26,8 +26,7 @@ export default class List {
   }
 
   buildCode(data) {
-    const code = this.fixLines(data, 'p', 'code');
-    return code;
+    return this.fixLines(data, 'p', 'code');
   }
 
   buildList(data) {
@@ -39,8 +38,7 @@ export default class List {
   }
 
   buildHeading(data) {
-    const heading = el('h2', data);
-    return heading;
+    return el('h2', data);
   }
 
   buildImage(data) {
@@ -55,13 +53,11 @@ export default class List {
   }
 
   buildQuote(data) {
-    const quote = el('blockquote', data.data, el('p', data.attribute));
-    return quote;
+    return el('blockquote', data.data, el('p', data.attribute));
   }
 
   buildText(data) {
-    const text = this.fixLines(data, 'p', 'div');
-    return text;
+    return this.fixLines(data, 'p', 'div');
   }
 
   buildVideo(data) {
@@ -126,12 +122,13 @@ export default class List {
     const isLectureRead = isRead(slug);
     const result = this.container;
     const banner = document.querySelector('.banner');
-    const link = el('a', document.createTextNode('Klára fyrirlestur'));
     const back = el('a', document.createTextNode('Til Baka'));
-    link.setAttribute('class', 'list__return');
-    link.setAttribute('data', slug);
     back.setAttribute('href', 'index.html');
     back.setAttribute('class', 'list__return');
+    const link = el('a', document.createTextNode('Klára fyrirlestur'));
+    link.setAttribute('href', 'index.html');
+    link.setAttribute('class', 'list__return');
+    link.setAttribute('data', slug);
     link.onclick = markRead;
 
     if (isLectureRead) {
@@ -152,8 +149,9 @@ export default class List {
 
   getSlug(paramName) {
     const searchString = window.location.search.substring(1);
-    let slug = searchString.split('&');
+    let slug;
     const params = searchString.split('&');
+
     for (let i = 0; i < params.length; i += 1) {
       slug = params[i].split('=');
       if (slug[0] === paramName) {

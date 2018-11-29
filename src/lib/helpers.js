@@ -23,18 +23,18 @@ export function el(name, ...children) {
 }
 
 export function isRead(slug) {
-  const lectures = load();
+  const lectures = load() || false;
   const isLectureRead = (lectures) ? lectures.indexOf(slug) > -1 : false;
   return isLectureRead;
 }
 
 export function markRead(e) {
+  e.preventDefault();
   const et = e.target;
   const etVal = et.attributes.data.value;
-  e.preventDefault();
   et.classList.toggle('marked');
 
-  if (et.classList.contains('marked')) {
+  if (e.target.classList.contains('marked')) {
     save(etVal);
     et.innerHTML = '<span>&#10004;</span> Fyrirlestur kláraður';
   } else {

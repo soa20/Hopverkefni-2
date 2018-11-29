@@ -130,9 +130,8 @@ export default class List {
     const back = el('a', document.createTextNode('Til Baka'));
     link.setAttribute('class', 'list__return');
     link.setAttribute('data', slug);
-    back.setAttribute('href', 'index.html')
+    back.setAttribute('href', 'index.html');
     back.setAttribute('class', 'list__return');
-    back.setAttribute('data', slug);
     link.onclick = markRead;
 
     if (isLectureRead) {

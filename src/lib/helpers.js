@@ -1,5 +1,6 @@
 import {
   save,
+  unSave,
   load
 } from './storage';
 
@@ -30,8 +31,14 @@ export function isRead(slug) {
 export function markRead(e) {
   const et = e.target;
   const etVal = et.attributes.data.value;
-  save(etVal);
-  console.log(e, etVal);
-  et.classList.add('marked');
-  et.innerHTML = '<span>&#10004;</span> Fyrirlestur kláraður';
+  e.preventDefault();
+  et.classList.toggle('marked');
+
+  if (et.classList.contains('marked')) {
+    save(etVal);
+    et.innerHTML = '<span>&#10004;</span> Fyrirlestur kláraður';
+  } else {
+    unSave(etVal);
+    et.innerHTML = 'Klára fyrirlestur';
+  }
 }

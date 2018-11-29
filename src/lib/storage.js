@@ -19,6 +19,17 @@ export function save(slug) {
   Store.setItem(LOCALSTORAGE_KEY, JSON.stringify(slugs));
 }
 
+export function unSave(slug) {
+  const data = slug;
+
+  console.log('DATA==', data);
+  let slugs = load();
+  if (slugs && slugs.length < 0) {
+    slugs.pop(data);
+  }
+  Store.removeItem(LOCALSTORAGE_KEY, JSON.stringify(slugs));
+}
+
 export function clear() {
   Store.removeItem(LOCALSTORAGE_KEY);
 }

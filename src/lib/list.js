@@ -30,7 +30,7 @@ export default class List {
     if (marked) {
       marked.classList.add('read');
       marked.innerHTML = '&#10003;';
-    }
+    } 
 
     result.setAttribute('class', `lecture card ${category}`);
     result.setAttribute('href', `fyrirlestur.html?slug=${slug}`);
